@@ -1,3 +1,123 @@
+### Перевод
+
+![](/Images/NanoFOC_GH.jpg?raw=true)
+
+#### Описание продукта:
+Начать свой первый проект FOC (управление с ориентированием по полю) может быть непросто, особенно если вы новичок.
+
+Как мейкеры, мы часто хотим сразу перейти к делу и писать прошивку, не тратя время на подбор подходящего микроконтроллера, магнитного датчика и драйвера мотора, их настройку и калибровку, а также на кучу проводов, из‑за которых проект становится слишком громоздким для применения в ваших устройствах.
+
+NanoFOC достаточно компактный, чтобы крепиться на заднюю сторону большинства небольших BLDC‑моторчиков от гимбалов (ещё проще с универсальным адаптером для BLDC‑моторов), что делает его отличным выбором для компактных проектов, требующих максимальной эффективности и точности.
+
+Ссылка для покупки: https://store.binaris.io/products/nanofoc-devkit
+
+### Характеристики:
+- Микроконтроллер Espressif ESP32‑S3, 4 МБ Flash, 2 МБ PSRAM
+- Драйвер BLDC Trinamic TMC6300 (6 PWM), малое энергопотребление
+- Магнитный поворотный датчик положения MPS MagAlpha MA710 или MAQ430
+- BiCMOS LDO 3,3 В
+- 11 программируемых GPIO (SPI, PWM, ADC, RTC и др.)
+- Доступны выводы I2C и UART
+- Питание от USB (совместимо с USB PD 2.0 — 5 В @ 3 А)
+- USB OTG
+- Доп. питание через площадки VIN
+
+### Шпаргалка по выводам:
+| Pin | Функция | В матрице GPIO? |
+| --- | --- | --- |
+| GPIO 01 | I2C SCL | ДА |
+| GPIO 02 | I2C SDA | ДА |
+| GPIO 04 | SPI CS — магнитный датчик | НЕТ |
+| GPIO 05 | SPI MOSI — магнитный датчик | НЕТ |
+| GPIO 06 | SPI SCLK — магнитный датчик | НЕТ |
+| GPIO 07 | SPI MISO — магнитный датчик | НЕТ |
+| GPIO 08 | I/O | ДА |
+| GPIO 09 | I/O | ДА |
+| GPIO 10 | VL — фаза B, низкий | НЕТ |
+| GPIO 11 | WL — фаза C, низкий | НЕТ |
+| GPIO 12 | UL — фаза A, низкий | НЕТ |
+| GPIO 13 | WH — фаза C, высокий | НЕТ |
+| GPIO 14 | VH — фаза B, высокий | НЕТ |
+| GPIO 17 | I/O | ДА |
+| GPIO 18 | I/O | ДА |
+| GPIO 19 | USB D- | НЕТ |
+| GPIO 20 | USB D+ | НЕТ |
+| GPIO 21 | UH — фаза A, высокий | НЕТ |
+| GPIO 38 | I/O | ДА |
+| GPIO 39 | I/O | ДА |
+| GPIO 40 | I/O | ДА |
+| GPIO 41 | I/O | ДА |
+| GPIO 42 | I/O | ДА |
+| GPIO 43 | UART0 TX или I/O | ДА |
+| GPIO 44 | UART0 RX или I/O | ДА |
+| GPIO 43 | UART0 TX | ДА |
+| GPIO 44 | UART0 RX | ДА |
+| GPIO 47 | I/O | ДА |
+| GPIO 48 | I/O | ДА |
+
+### Компоновка платы:
+
+![](/Images/PCB_LAYOUT.jpg)
+
+### Спецификация компонентов (BOM)
+
+| Компонент | Обозначения | Корпус | Количество | Ссылка | Цена |
+| --- | --- | --- | --- | --- | --- |
+| 100nF | C1, C2, C4, C8, C12 | 0603 | 5 | https://eu.mouser.com/ProductDetail/KEMET/C0603C104K8RAC | 0,55 € |
+| 4.7uF | C5, C6 | 0805 | 2 | https://eu.mouser.com/ProductDetail/TDK/C2012X7R1A475K125AC | 0,46 € |
+| 10uF | C7, C13 | 0603 | 2 | https://eu.mouser.com/ProductDetail/Samsung-Electro-Mechanics/CL10A106KP8NNWC | 0,24 € |
+| 22uF | C9 | 0805 | 1 | https://eu.mouser.com/ProductDetail/Murata-Electronics/GRM21BC81C226ME44L | 0,39 € |
+| 22uF | C11 | 0603 | 1 | https://eu.mouser.com/ProductDetail/Murata-Electronics/GRM188R61A226ME15J | 0,17 € |
+| 100K | R1-R6 | 0603 | 6 | https://eu.mouser.com/ProductDetail/Bourns/CMP0603-FX-1003ELF | 1,20 € |
+| 300R | R7, R8 | 0603 | 2 | https://eu.mouser.com/ProductDetail/Panasonic/ERJ-UP3F3000V | 0,48 € |
+| 150m | R9, R10 | 0603 | 2 | https://eu.mouser.com/ProductDetail/Susumu/KRL0816D-C-R150-F-T5 | 1,20 € |
+| 340R | R14 | 0603 | 1 | https://eu.mouser.com/ProductDetail/Panasonic/ERJ-3EKF3400V | 0,09 € |
+| 5.1K | R13 | 0603 | 2 | https://eu.mouser.com/ProductDetail/Panasonic/ERJ-P03F5101V | 0,70 € |
+| 10K | R15 | 0603 | 1 | https://eu.mouser.com/ProductDetail/ROHM-Semiconductor/SFR03EZPF1002 | 0,13 € |
+| 100MHz 400Ω 1.5A | L1 | 0805 | 1 | https://eu.mouser.com/ProductDetail/Laird-Performance-Materials/MI0805K400R-10 | 0,19 € |
+| NUF2042XV6T1G | D3 | SOT-563 | 1 | https://www.mouser.com/ProductDetail/onsemi/NUF2042XV6T1G | 0,44 € |
+| CUS15S30 | D4 | SOD-323 | 1 | https://www.mouser.com/ProductDetail/Toshiba/CUS15S30H3F | 0,33 € |
+| Светодиод жёлто/зелёный моно | D5, DRV | 0603 | 2 | https://eu.mouser.com/ProductDetail/ROHM-Semiconductor/SML-D12M8WT86 | 0,68 € |
+| ESP32-S3 N4R2 1U | U1 | ESP32-S3-WROOM-1U | 1 | https://www.mouser.com/ProductDetail/Espressif-Systems/ESP32-S3-WROOM-1U-N8R2 | 3,38 € |
+| TMC6300 LA | U2 | QFN20 | 1 | https://eu.mouser.com/ProductDetail/ADI-Trinamic/TMC6300-LA-T | 2,13 € |
+| MPS MA710 | U3 | QFN16 | 1 | https://www.mouser.com/ProductDetail/Monolithic-Power-Systems-MPS/MA710GQ-Z | 6,15 € |
+| Alps SKTDLDE010 | SW1, SW2 | SKTDLDE010 | 2 | https://eu.mouser.com/ProductDetail/Alps-Alpine/SKTDLDE010 | 1,46 € |
+| Светодиод янтарный моно | ERR | 0603 | 1 | https://eu.mouser.com/ProductDetail/Wurth-Elektronik/150060AS75000 | 0,14 € |
+| ST1L05CPU33R LDO | IC1 | DFN6 | 1 | https://www.mouser.com/ProductDetail/STMicroelectronics/ST1L05CPU33R | 1,18 € |
+| G-Switch_GT-USB-7010ASV | P1 | 7010ASV | 1 | https://www.mouser.com/ProductDetail/GCT/USB4105-GF-A | 0,75 € |
+| | | | **38** | | **22,44 € / 23.50 $** |
+
+### Варианты питания:
+Устройство рассчитано на питание от 5 В, до 1,5 А (макс.).
+Есть два способа подать питание на плату:
+
+1. USB Type‑C — подача питания ограничена 5 В 3 А благодаря резисторам 5,1 кОм на контактах CC1 и CC2. Рекомендуется использовать USB, совместимый с PD 2.0.
+   Возможно питание от USB‑порта, способного выдавать 500 мА, однако это не рекомендуется.
+
+2. Внешний VIN — это подключение обходит L1 и D4, подводя питание напрямую к драйверу и выводу VS LDO. Рекомендуемое входное напряжение — 5 В, максимально допустимое — 6 В (ограничено максимальным VIN LDO ST1L05C).
+
+### Первичная настройка
+Набор для разработки поставляется без прошивки.
+Поскольку ESP32‑S3 имеет встроенные USB‑OTG/USB‑Serial, предполагается, что именно этот метод будет предпочтительным для загрузки кода.
+Если вы подключаете устройство к компьютеру впервые, важно перевести его в режим DFU.
+
+**Как войти в режим DFU:**
+1. Подключите плату к USB‑порту. На компьютерах с Windows вы можете услышать, что звук обнаружения USB циклически включается и выключается — на этом этапе это нормально.
+2. Нажмите и удерживайте кнопку **BOOT**.
+3. Удерживая **BOOT**, нажмите и удерживайте кнопку **RESET** примерно **2 секунды**.
+4. Отпустите **RESET**.
+5. Отпустите **BOOT**.
+6. Плата находится в **режиме DFU**, можно загружать прошивку через Arduino IDE или PlatformIO.
+
+Также можно использовать выводы UART, доступные через матрицу GPIO, чтобы загружать прошивку «по‑старинке». Для этого потребуется внешний TTL‑конвертер.
+
+### Проекты, использующие NanoFOC:
+
+SmartKnob (Scott Bezek) → https://github.com/scottbez1/smartknob#nanofoc-3rd-party
+
+### Оригинал
+
+
 ![](/Images/NanoFOC_GH.jpg?raw=true)
 
 #### Product Description:
