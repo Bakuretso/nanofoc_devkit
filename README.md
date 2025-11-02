@@ -3,7 +3,7 @@
 ![](/Images/NanoFOC_GH.jpg?raw=true)
 
 #### Описание продукта:
-Начать свой первый проект FOC (управление с ориентированием по полю) может быть непросто, особенно если вы новичок.
+Начать свой первый проект FOC может быть непросто, особенно если вы новичок.
 
 Как мейкеры, мы часто хотим сразу перейти к делу и писать прошивку, не тратя время на подбор подходящего микроконтроллера, магнитного датчика и драйвера мотора, их настройку и калибровку, а также на кучу проводов, из‑за которых проект становится слишком громоздким для применения в ваших устройствах.
 
@@ -113,7 +113,7 @@ NanoFOC достаточно компактный, чтобы крепиться
 
 ### Проекты, использующие NanoFOC:
 
-SmartKnob (Scott Bezek) → https://github.com/scottbez1/smartknob#nanofoc-3rd-party
+SmartKnob (Scott Bezek) → https://github.com/Bakuretso/smartknob 
 
 ### Оригинал
 
@@ -234,5 +234,5 @@ In order to do that you need external TTL Converter.
 
 ### Projects using NanoFOC:
 
-SmartKnob by Scott Bezek -> https://github.com/scottbez1/smartknob#nanofoc-3rd-party
+SmartKnob by Scott Bezek -> https://github.com/Bakuretso/smartknob
 
